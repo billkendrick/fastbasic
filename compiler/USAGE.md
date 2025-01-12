@@ -273,7 +273,7 @@ To implement the functions above, the following FastBasic code could be used:
 |Function| Equivalent Code           |
 | ------ | ------------------------- |
 | CSTART | `NOT (PEEK(53279) & 1)` |
-| CSELECT| `NOT (PEEK(53279) & 4)` |
+| CSELECT| `NOT (PEEK(53279) & 2)` |
 | COPTION| `NOT (PEEK(53279) & 4)` |
 
 #### 1. Create a new target
@@ -450,7 +450,7 @@ There some parts of the syntax file that needs explanation:
   denote "optional" part of the name, so you can abbreviate this new statement
   as "WA." or "WAI.".
 
-- We are loafing the `DO_WAIT` address into the `USR` calling address as the
+- We are loading the `DO_WAIT` address into the `USR` calling address as the
   first step in the generated code. This is needed to be able to call the
   assembly code with out parameter in the accumulator.
 
